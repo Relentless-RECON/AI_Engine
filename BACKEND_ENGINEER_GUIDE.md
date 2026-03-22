@@ -89,7 +89,10 @@ Request:
   "max_payloads_per_param": 18,
   "delay_ms": 100,
   "include_header_scan": true,
-  "allow_private_targets": false
+  "allow_private_targets": false,
+  "enable_spa_api_discovery": true,
+  "max_js_files": 8,
+  "guess_common_params": true
 }
 ```
 
@@ -188,4 +191,3 @@ Use this example adapter as a base:
 5. Add queue + worker layer if running many scans concurrently.
 6. Add audit logs (who started scan, target, timestamps, outcome).
 7. Restrict outbound egress if your security policy requires it.
-

@@ -14,6 +14,9 @@ BASE_METRICS = {
     "missing_security_header": (4.8, 7.0, 4.0),
     "permissive_cors": (7.4, 7.2, 6.4),
     "server_disclosure": (2.5, 7.5, 2.1),
+    "csrf_missing_token": (6.4, 7.2, 5.4),
+    "dangerous_http_methods": (5.8, 6.5, 4.8),
+    "injection_anomaly": (5.9, 6.2, 5.0),
 }
 
 
@@ -39,4 +42,3 @@ def calculate_score(vulnerability_type: str, confidence: float) -> Tuple[float, 
     weighted = raw * (0.65 + 0.35 * confidence)
     score = round(min(10.0, weighted), 1)
     return score, severity_from_score(score)
-

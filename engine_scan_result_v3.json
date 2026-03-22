@@ -1,0 +1,400 @@
+{
+  "scan_id": "41a11958-5d85-45fd-a2d7-7063fcce3f8c",
+  "target_url": "http://testaspnet.vulnweb.com",
+  "started_at": "2026-03-22T14:11:47.501589+00:00",
+  "completed_at": "2026-03-22T14:15:51.391152+00:00",
+  "duration_ms": 243889,
+  "stats": {
+    "endpoints_discovered": 25,
+    "requests_sent": 242,
+    "findings_count": 24,
+    "errors_count": 0
+  },
+  "findings": [
+    {
+      "finding_id": "8e4adac6-6e1d-48a9-a145-40b0a8c977c9",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/default.aspx",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "ccb92911-f081-418a-ba51-c7dda5cb834a",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/about.aspx",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "73873b85-b438-4d97-a50c-3cd8771e7106",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/login.aspx",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "2f9e3107-44ec-40ab-8326-017b33729d22",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/Signup.aspx",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "4682dd68-c8ea-4248-b439-a2b1c31fa5ab",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=0",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "67695736-cb16-4628-9161-c7baf947010a",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=0&NewsAd=ads%2fdef.html",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "837091a0-00fb-4a78-9e3e-554e23dc43fd",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=3",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "8bf10835-c941-4b7a-bdca-38f06ecc197d",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=3&NewsAd=ads%2fdef.html",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "a631407e-dece-4053-9f2a-652bc1a98b1a",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=2",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "760cbb2b-bc05-416a-b9d8-027555293cba",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=2&NewsAd=ads%2fdef.html",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "66731700-8f8f-48e8-87e9-20aff1ddfe7f",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=0+AND+1%3D1",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "0 AND 1=1 | 0 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=1.00 sim_false=0.16 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "3e66929a-f129-4bbe-beb8-f312480ed064",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=0+AND+1%3D1&NewsAd=ads%2Fdef.html",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "0 AND 1=1 | 0 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=0.98 sim_false=0.31 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "38efd428-30b3-4f85-b1a2-ceef80fc3713",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=3+AND+1%3D1",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "3 AND 1=1 | 3 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=1.00 sim_false=0.12 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "41bc90c3-aba5-4fe8-a848-174fce85a85a",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=3+AND+1%3D1&NewsAd=ads%2Fdef.html",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "3 AND 1=1 | 3 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=0.99 sim_false=0.43 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "a67e3842-15b3-41da-b246-e3063625601d",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=2+AND+1%3D1",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "2 AND 1=1 | 2 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=1.00 sim_false=0.12 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "5932517f-1785-421b-926e-bc35ac323be4",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=2+AND+1%3D1&NewsAd=ads%2Fdef.html",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "2 AND 1=1 | 2 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=1.00 sim_false=0.10 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "37759790-b56e-46bd-8579-7c76e65254b1",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=0+AND+1%3D1",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "0 AND 1=1 | 0 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=0.99 sim_false=0.31 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "51e545da-83ff-4650-9583-a0c372ed045e",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=3+AND+1%3D1",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "3 AND 1=1 | 3 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=0.99 sim_false=0.42 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "1a35a6e1-d724-4747-a157-fccbde78abac",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "content-security-policy",
+      "payload": "",
+      "evidence": "Missing security header: content-security-policy",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "0ab44cbc-8c95-4b53-878a-1b26d06a6647",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "x-frame-options",
+      "payload": "",
+      "evidence": "Missing security header: x-frame-options",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "95c3b27b-d908-4611-8137-2449b67453cf",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "strict-transport-security",
+      "payload": "",
+      "evidence": "Missing security header: strict-transport-security",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "f3290f94-7d08-4be1-ace4-a9d21c120eca",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "x-content-type-options",
+      "payload": "",
+      "evidence": "Missing security header: x-content-type-options",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "b2045652-6d42-4ac8-8c7f-a6d06669d0f9",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "referrer-policy",
+      "payload": "",
+      "evidence": "Missing security header: referrer-policy",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "aaca67b6-c5cb-4dff-8560-5d528202ab88",
+      "vulnerability_type": "server_disclosure",
+      "severity": "Low",
+      "score": 3.6,
+      "confidence": 0.8,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "server",
+      "payload": "",
+      "evidence": "Server technology disclosure header is present.",
+      "recommendation": "Remove or sanitize technology disclosure headers (Server, X-Powered-By) in production.",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    }
+  ],
+  "errors": []
+}

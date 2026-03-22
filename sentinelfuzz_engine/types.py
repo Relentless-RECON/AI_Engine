@@ -22,6 +22,9 @@ class ScanConfig:
     include_header_scan: bool = True
     allow_private_targets: bool = False
     user_agent: str = "SentinelFuzz/1.0"
+    enable_spa_api_discovery: bool = True
+    max_js_files: int = 8
+    guess_common_params: bool = True
 
     @classmethod
     def from_payload(cls, payload: Dict[str, Any]) -> "ScanConfig":
@@ -36,6 +39,9 @@ class ScanConfig:
             include_header_scan=bool(payload.get("include_header_scan", True)),
             allow_private_targets=bool(payload.get("allow_private_targets", False)),
             user_agent=str(payload.get("user_agent", "SentinelFuzz/1.0")),
+            enable_spa_api_discovery=bool(payload.get("enable_spa_api_discovery", True)),
+            max_js_files=int(payload.get("max_js_files", 8)),
+            guess_common_params=bool(payload.get("guess_common_params", True)),
         )
 
 
@@ -44,6 +50,7 @@ class Endpoint:
     url: str
     method: str = "GET"
     parameters: List[str] = field(default_factory=list)
+    default_params: Dict[str, str] = field(default_factory=dict)
     source: str = "crawl"
 
 
@@ -107,4 +114,3 @@ class ScanResult:
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
-

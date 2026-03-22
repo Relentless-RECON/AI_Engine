@@ -41,6 +41,15 @@ OFFLINE_REMEDIATION = {
     "server_disclosure": (
         "Remove or sanitize technology disclosure headers (Server, X-Powered-By) in production."
     ),
+    "csrf_missing_token": (
+        "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session."
+    ),
+    "dangerous_http_methods": (
+        "Disable unnecessary HTTP methods (especially TRACE, PUT, DELETE, CONNECT) at the web server and app gateway."
+    ),
+    "injection_anomaly": (
+        "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants."
+    ),
 }
 
 
@@ -140,4 +149,3 @@ class AIEngine:
             return self.provider.generate(finding)
         except (RuntimeError, urllib.error.URLError, TimeoutError, ValueError):
             return self.offline_fallback.generate(finding)
-

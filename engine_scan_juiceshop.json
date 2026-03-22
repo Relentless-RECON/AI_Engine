@@ -1,0 +1,96 @@
+{
+  "scan_id": "244d6b6b-5ce5-44d5-bc13-c45d408bfd55",
+  "target_url": "https://demo.owasp-juice.shop",
+  "started_at": "2026-03-22T14:16:30.978224+00:00",
+  "completed_at": "2026-03-22T14:16:32.526960+00:00",
+  "duration_ms": 1548,
+  "stats": {
+    "endpoints_discovered": 1,
+    "requests_sent": 1,
+    "findings_count": 5,
+    "errors_count": 0
+  },
+  "findings": [
+    {
+      "finding_id": "c28447f1-dcbe-4d68-aae6-ae9de6b4646f",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "https://demo.owasp-juice.shop",
+      "method": "HEAD",
+      "parameter": "content-security-policy",
+      "payload": "",
+      "evidence": "Missing security header: content-security-policy",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "1d528eb8-74be-41bb-b919-07d4c134baaa",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "https://demo.owasp-juice.shop",
+      "method": "HEAD",
+      "parameter": "strict-transport-security",
+      "payload": "",
+      "evidence": "Missing security header: strict-transport-security",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "fe7d73a5-af36-438d-850f-e7a8e628f173",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "https://demo.owasp-juice.shop",
+      "method": "HEAD",
+      "parameter": "referrer-policy",
+      "payload": "",
+      "evidence": "Missing security header: referrer-policy",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "16423c68-0feb-4bc8-8749-82b4dc65607f",
+      "vulnerability_type": "permissive_cors",
+      "severity": "Medium",
+      "score": 6.9,
+      "confidence": 0.9,
+      "url": "https://demo.owasp-juice.shop",
+      "method": "HEAD",
+      "parameter": "access-control-allow-origin",
+      "payload": "",
+      "evidence": "CORS policy allows all origins with wildcard '*'.",
+      "recommendation": "Replace wildcard CORS with explicit trusted origins and least-privilege methods/headers.",
+      "references": [
+        "https://owasp.org/www-community/attacks/CORS_OriginHeaderScrutiny"
+      ]
+    },
+    {
+      "finding_id": "12627b2c-ad9a-4b32-9733-d6cf7c8c9821",
+      "vulnerability_type": "server_disclosure",
+      "severity": "Low",
+      "score": 3.6,
+      "confidence": 0.8,
+      "url": "https://demo.owasp-juice.shop",
+      "method": "HEAD",
+      "parameter": "server",
+      "payload": "",
+      "evidence": "Server technology disclosure header is present.",
+      "recommendation": "Remove or sanitize technology disclosure headers (Server, X-Powered-By) in production.",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    }
+  ],
+  "errors": []
+}
