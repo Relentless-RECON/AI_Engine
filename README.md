@@ -16,3 +16,11 @@ Key runtime files:
 - [sentinelfuzz_engine/server.py](/f:/Hackathon/SentinelFuzz/AI_Engine/sentinelfuzz_engine/server.py)
 - [examples/node_client.js](/f:/Hackathon/SentinelFuzz/AI_Engine/examples/node_client.js)
 - [.env.example](/f:/Hackathon/SentinelFuzz/AI_Engine/.env.example)
+
+Recent engine upgrades:
+
+- SPA/API discovery from JavaScript assets
+- Seeded API probing for modern frontend apps
+- Smart parameter guessing for API endpoints without explicit form fields
+- Stronger SQLi signatures and differential boolean checks
+- Reduced duplicate/noisy findings during reporting

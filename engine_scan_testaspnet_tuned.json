@@ -1,0 +1,496 @@
+{
+  "scan_id": "4f091ebe-eb49-4f9f-bc72-54d5a4398e78",
+  "target_url": "http://testaspnet.vulnweb.com",
+  "started_at": "2026-03-22T14:55:30.520397+00:00",
+  "completed_at": "2026-03-22T14:58:57.153168+00:00",
+  "duration_ms": 206633,
+  "stats": {
+    "endpoints_discovered": 21,
+    "requests_sent": 250,
+    "findings_count": 30,
+    "errors_count": 0
+  },
+  "findings": [
+    {
+      "finding_id": "959e86d0-1d9c-4977-b2b9-af94bba7019f",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/default.aspx",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "cfc66021-7162-48b9-818e-57c01e30756e",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/about.aspx",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "1eb79164-a383-40df-97af-f349e381d47b",
+      "vulnerability_type": "csrf_missing_token",
+      "severity": "Medium",
+      "score": 5.9,
+      "confidence": 0.75,
+      "url": "http://testaspnet.vulnweb.com/login.aspx",
+      "method": "POST",
+      "parameter": "form",
+      "payload": "",
+      "evidence": "POST form detected without obvious anti-CSRF token parameter.",
+      "recommendation": "Add anti-CSRF tokens to all state-changing forms and validate them server-side per session.",
+      "references": [
+        "https://owasp.org/www-community/attacks/csrf"
+      ]
+    },
+    {
+      "finding_id": "c776d4e3-77ec-449c-a043-68269cfd2bbe",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com?id=%3Cscript%3Ealert%281%29%3C%2Fscript%3E",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "ac09be22-8b72-4b2c-ac87-bb717a607638",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/about.aspx?id=%3Cscript%3Ealert%281%29%3C%2Fscript%3E",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "38b6943d-38e1-422d-9081-65992bd61a5b",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/default.aspx?id=%3Cscript%3Ealert%281%29%3C%2Fscript%3E",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "e3bc9e00-6244-4b29-8294-c20599a9ce95",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/login.aspx?id=%3Cscript%3Ealert%281%29%3C%2Fscript%3E",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "9fa3051e-2eb0-4610-8eea-caafef58232f",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/login.aspx?user=%3Cscript%3Ealert%281%29%3C%2Fscript%3E",
+      "method": "GET",
+      "parameter": "user",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "f9edeac5-1a5b-4825-9d0a-af5a6b3a7ce3",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/Signup.aspx?id=%3Cscript%3Ealert%281%29%3C%2Fscript%3E",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "914000b1-0586-48e8-93a5-87003998b468",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/rssFeed.aspx?id=%3Cscript%3Ealert%281%29%3C%2Fscript%3E",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "cfb563bc-a757-4310-8fd2-2abe74242059",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=0+AND+1%3D1",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "0 AND 1=1 | 0 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=1.00 sim_false=0.09 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "5c1478f2-ced3-4c3f-bcea-cdd4eb12bf20",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=0&NewsAd=%3Cscript%3Ealert%281%29%3C%2Fscript%3E",
+      "method": "GET",
+      "parameter": "NewsAd",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "d2ce53bb-7a45-4c64-84e8-c5982de43b06",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=0+AND+1%3D1&NewsAd=ads%2Fdef.html",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "0 AND 1=1 | 0 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=0.98 sim_false=0.31 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "400aa40c-5624-4589-b770-60944c043492",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=%3Cscript%3Ealert%281%29%3C%2Fscript%3E&NewsAd=ads%2Fdef.html",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "<script>alert(1)</script>",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "0d268a24-9c81-4525-9c34-b7fdc3937b94",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=3+AND+1%3D1",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "3 AND 1=1 | 3 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=1.00 sim_false=0.20 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "d7534b22-5b99-4abb-95ff-13ca3312b0af",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=3+AND+1%3D1&NewsAd=ads%2Fdef.html",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "3 AND 1=1 | 3 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=0.99 sim_false=0.43 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "b60aab25-04f0-4676-88cb-e04a2021eca7",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/Comments.aspx?id=2+AND+1%3D1",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "2 AND 1=1 | 2 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=1.00 sim_false=0.10 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "7308f8f1-57cc-4120-a743-434e500e7ff6",
+      "vulnerability_type": "sql_injection",
+      "severity": "High",
+      "score": 8.5,
+      "confidence": 0.84,
+      "url": "http://testaspnet.vulnweb.com/ReadNews.aspx?id=2+AND+1%3D1&NewsAd=ads%2Fdef.html",
+      "method": "GET",
+      "parameter": "id",
+      "payload": "2 AND 1=1 | 2 AND 1=2",
+      "evidence": "Differential SQLi behavior observed with boolean payload pair. sim_true=1.00 sim_false=0.10 status_true=200 status_false=200",
+      "recommendation": "Use parameterized queries/prepared statements, enforce server-side input validation, and remove database error leakage from HTTP responses.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "8ce47aaf-6a3f-40da-8d47-fd1a41cd6c03",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/default.aspx",
+      "method": "POST",
+      "parameter": "id",
+      "payload": "'",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "5aeb7161-84a7-4149-b219-0d9831e225f7",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/about.aspx",
+      "method": "POST",
+      "parameter": "id",
+      "payload": "'",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "7d6d21f4-3649-46ae-88ea-4564540ecea0",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/login.aspx",
+      "method": "POST",
+      "parameter": "btnLogin",
+      "payload": "'",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "55e8d503-967d-4ed8-9653-d0a123626152",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/login.aspx",
+      "method": "POST",
+      "parameter": "cbPersistCookie",
+      "payload": "'",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "b0e9b1a2-84b5-494f-a602-fc5e501531a4",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/login.aspx",
+      "method": "POST",
+      "parameter": "tbPassword",
+      "payload": "'",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "75ea9be9-3bf2-4966-ac98-c7ee9a867d4a",
+      "vulnerability_type": "injection_anomaly",
+      "severity": "Medium",
+      "score": 5.0,
+      "confidence": 0.58,
+      "url": "http://testaspnet.vulnweb.com/login.aspx",
+      "method": "POST",
+      "parameter": "tbUsername",
+      "payload": "'",
+      "evidence": "Injected payload produced server error status=500",
+      "recommendation": "Investigate server-side exception handling for this input path, add strict validation, and retest with encoded payload variants.",
+      "references": [
+        "https://owasp.org/Top10/A03_2021-Injection/"
+      ]
+    },
+    {
+      "finding_id": "e29423ab-36ce-43d1-b0de-ccfbff8b0441",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "content-security-policy",
+      "payload": "",
+      "evidence": "Missing security header: content-security-policy",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "fd0ad7ed-7ca8-49ee-8725-27f594dd2293",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "x-frame-options",
+      "payload": "",
+      "evidence": "Missing security header: x-frame-options",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "89ecbe90-c394-4c83-a9e1-cc2d35a03646",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "strict-transport-security",
+      "payload": "",
+      "evidence": "Missing security header: strict-transport-security",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "fdda9937-3a7a-406c-a6fc-ce3fd74ac720",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "x-content-type-options",
+      "payload": "",
+      "evidence": "Missing security header: x-content-type-options",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "3514d4e7-204f-4c97-8ef5-cb532788775a",
+      "vulnerability_type": "missing_security_header",
+      "severity": "Medium",
+      "score": 5.2,
+      "confidence": 0.95,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "referrer-policy",
+      "payload": "",
+      "evidence": "Missing security header: referrer-policy",
+      "recommendation": "Add baseline secure headers (CSP, X-Frame-Options, HSTS, X-Content-Type-Options, Referrer-Policy).",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    },
+    {
+      "finding_id": "64985bdc-f9ca-4fc2-a27e-3f90ef2c118c",
+      "vulnerability_type": "server_disclosure",
+      "severity": "Low",
+      "score": 3.6,
+      "confidence": 0.8,
+      "url": "http://testaspnet.vulnweb.com",
+      "method": "HEAD",
+      "parameter": "server",
+      "payload": "",
+      "evidence": "Server technology disclosure header is present.",
+      "recommendation": "Remove or sanitize technology disclosure headers (Server, X-Powered-By) in production.",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/"
+      ]
+    }
+  ],
+  "errors": []
+}
